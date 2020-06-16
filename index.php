@@ -27,28 +27,38 @@ $message = $bdd->query('SELECT * FROM Message ORDER BY ID DESC LIMIT 0, 5')
    <head>
        <title>Mini chat</title>
        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+       <link rel="stylesheet" type="text/css" href="chat.css">
    </head>
 
    <body>
-   	
-   	<form method="post" action="formulaire.php">
-	   	<p>	
-	   		Insére ton pseudo : <input type="text" name="pseudo"required="required"> <br />
-	   		Insére ton message : <textarea name="message"required> </textarea> <br>
-	   		<input type="submit" name="envoyer" >
-	   	</p>
-	</form>
-	<button type="button" name="refresh" onclick="history.go (0)">Refresh</button>
-	<?php 
-	//Affichage des messages et des pseudo stocké dans la base donnée
-		while ($donnees = $message->fetch()) {
-	 ?>
-	 	<p><strong>Pseudo : </strong> <?php echo htmlspecialchars($donnees['pseudo']);?> , <strong>Message :</strong> <?php echo htmlspecialchars($donnees['message']);?></p>
-	<?php
-	}
+		<article>
+			
+			<div>
+				<?php 
+				//Affichage des messages et des pseudo stocké dans la base donnée
+						while ($donnees = $message->fetch()) {
+					 ?>
 
-	$reponse->closeCursor(); // Termine le traitement de la requête
+					 	<p>
+					 		<img src="./image/avatar.png">
+					 		<strong><?php echo htmlspecialchars($donnees['pseudo']);?></strong>  <br>
+					 		<?php echo htmlspecialchars($donnees['message']);?> <br>
+							<em><?php echo htmlspecialchars($donnees['heure']);?></em> 
+					 	</p>
+					<?php
+					}
+				?>
+			</div>
+		  
+		   	<form method="post" action="formulaire.php">
+	
+			   	 <input type="text" placeholder="pseudo" name="pseudo"required="required"> 
+			   	 <textarea style="resize: none;" name="message" required placeholder="message"> </textarea> 
+			   	<input type="submit" name="envoyer" value="Go">
 
-	?>
+			</form>
+			
+		
+		</article>
    </body>
 </html>

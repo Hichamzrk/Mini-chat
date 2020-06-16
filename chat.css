@@ -1,0 +1,62 @@
+body
+{
+	background-color: #4e5866
+}
+img 
+{
+  max-width: 5%;
+  height: auto;
+}
+
+em
+{
+	font-size: 10px;
+}
+
+article
+{
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	border: solid 1px;
+	border-radius: 30px;
+	padding: 2%;
+	background: #353b45;
+	box-shadow: 6px 6px 25px -5px rgba(36,36,36,1);
+}
+
+div p
+{
+	border-radius: 30px;
+	background: #adcfa0;
+	padding : 3%;
+	box-shadow: 6px 6px 25px -5px rgba(66,66,66,1);
+}
+
+strong
+{
+	font-size: 25px;
+}
+
+form
+{
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 6px 6px 25px -5px rgba(66,66,66,1);
+}
+
+textarea
+{
+	width: 100%;
+	border-radius: 30px;
+	border-color: #3ec1f7;
+	box-shadow: 6px 6px 25px -5px rgba(66,66,66,1);
+}
+
+input
+{	
+	border-radius: 30px;
+	border-color: #3ec1f7;
+	box-shadow: 6px 6px 25px -5px rgba(66,66,66,1);
+}
