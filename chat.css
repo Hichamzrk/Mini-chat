@@ -11,6 +11,7 @@ img
 em
 {
 	font-size: 10px;
+	color: #ffffff;
 }
 
 article
@@ -24,6 +25,8 @@ article
 	padding: 2%;
 	background: #353b45;
 	box-shadow: 6px 6px 25px -5px rgba(36,36,36,1);
+	max-height: 800px;
+	overflow: overlay;
 }
 
 div p
@@ -59,4 +62,20 @@ input
 	border-radius: 30px;
 	border-color: #3ec1f7;
 	box-shadow: 6px 6px 25px -5px rgba(66,66,66,1);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4e5866;
+  border-radius: 0px;
 }
